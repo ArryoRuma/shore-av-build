@@ -13,6 +13,13 @@
   // Fullscreen functionality
   let isFullscreen = false;
 
+  function exitFullscreenMode() {
+    document.body.classList.remove('fullscreen-mode');
+    isFullscreen = false;
+    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+    fullscreenBtn.title = "Enter Fullscreen (F)";
+  }
+
   function toggleFullscreen() {
     if (!isFullscreen) {
       // Enter fullscreen
@@ -37,30 +44,21 @@
       } else if (document.msExitFullscreen) { // IE11
         document.msExitFullscreen();
       }
-      document.body.classList.remove('fullscreen-mode');
-      isFullscreen = false;
-      fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-      fullscreenBtn.title = "Enter Fullscreen (F)";
+      exitFullscreenMode();
     }
   }
 
   // Listen for fullscreen changes (e.g., ESC key)
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      document.body.classList.remove('fullscreen-mode');
-      isFullscreen = false;
-      fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-      fullscreenBtn.title = "Enter Fullscreen (F)";
+      exitFullscreenMode();
     }
   });
 
   // Also listen for webkit and ms prefixed events
   document.addEventListener('webkitfullscreenchange', () => {
     if (!document.webkitFullscreenElement) {
-      document.body.classList.remove('fullscreen-mode');
-      isFullscreen = false;
-      fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-      fullscreenBtn.title = "Enter Fullscreen (F)";
+      exitFullscreenMode();
     }
   });
 
