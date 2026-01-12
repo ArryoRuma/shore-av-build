@@ -98,18 +98,21 @@ Three minor structural issues were identified and immediately corrected:
 - Uses decorative shapes and different layout
 - Properly noted in DESIGN_DECISIONS.md as cover slide exception
 
-**Slides 2-11:** ✅ All follow consistent pattern
+**Slides 2-11:** ✅ All follow consistent pattern with perfect consistency
 - ✅ All have 2px primary color top bar
 - ✅ All have 16px (h-16) header with church icon and proposal title
 - ✅ All have main content area with flex-1
 - ✅ All have footer with "Shore Christian Church - Sanctuary AV Design" text
 - ✅ All have progress dots in footer
+- ✅ All have consistent `bg-white` footer background
 
 **Issues Found & Fixed:**
 - ❌ **Slide 9** had footer inside main content area instead of at slide-container level
   - **Fixed:** Moved footer to proper position at slide-container level
 - ❌ **Slide 2** had nav.js script after closing html tag
   - **Fixed:** Moved script tag before closing body tag
+- ❌ **Slides 2 & 7** had `bg-gray-50` footer instead of `bg-white`
+  - **Fixed:** Standardized all footers to `bg-white` for consistency
 
 **Status:** Full compliance (after corrections)
 
@@ -265,7 +268,7 @@ The current index.html is functional but minimal. According to DESIGN_DECISIONS.
 
 ### Critical Issues: 0
 
-### Minor Issues: 3 (All Fixed)
+### Minor Issues: 5 (All Fixed)
 
 1. **index.html - Malformed HTML**
    - **Issue:** Orphaned footer elements (lines 38-42) outside proper container
@@ -283,6 +286,18 @@ The current index.html is functional but minimal. According to DESIGN_DECISIONS.
    - **Issue:** nav.js script tag after closing `</html>` tag
    - **Impact:** Invalid HTML, though browsers may still execute
    - **Fix:** Moved script tag before closing `</body>` tag
+   - **Status:** ✅ Fixed
+
+4. **Slide 2 - Footer Background Inconsistency**
+   - **Issue:** Footer used `bg-gray-50` instead of `bg-white` (majority pattern)
+   - **Impact:** Visual inconsistency across slides
+   - **Fix:** Changed to `bg-white` for consistency with slides 1, 3-6, 8-11
+   - **Status:** ✅ Fixed
+
+5. **Slide 7 - Footer Background Inconsistency**
+   - **Issue:** Footer used `bg-gray-50` instead of `bg-white` (majority pattern)
+   - **Impact:** Visual inconsistency across slides
+   - **Fix:** Changed to `bg-white` for consistency with all other slides
    - **Status:** ✅ Fixed
 
 ---
