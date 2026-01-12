@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>What's Included &amp; Excluded</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text-primary {
+            color: #2E5C8A;
+        }
+
+        .bg-primary {
+            background-color: #2E5C8A;
+        }
+
+        .text-secondary {
+            color: #4A90E2;
+        }
+
+        .bg-secondary {
+            background-color: #4A90E2;
+        }
+
+        .bg-success-light {
+            background-color: #ECFDF5;
+        }
+
+        .text-success {
+            color: #059669;
+        }
+
+        .bg-gray-light {
+            background-color: #F3F4F6;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .check-icon {
+            color: #059669;
+            /* Green-600 */
+        }
+
+        .cross-icon {
+            color: #9CA3AF;
+            /* Gray-400 */
+        }
+
+        .divider-vertical {
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            bottom: 10%;
+            width: 1px;
+            background-color: #E5E7EB;
+            transform: translateX(-50%);
+        }
+
+        .circle-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Top Bar -->
+        <div class="w-full h-2 bg-primary"></div>
+        <div class="w-full h-16 flex items-center justify-between px-12 border-b border-gray-100 bg-white">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-church text-secondary text-xl"></i>
+                <span class="font-heading font-semibold text-gray-500 uppercase tracking-widest text-sm">Shore Christian
+                    Church</span>
+            </div>
+            <span class="text-gray-400 text-sm">AV System Design Proposal</span>
+        </div>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col px-12 py-8 bg-gray-50 relative">
+            <!-- Slide Title -->
+            <div class="text-center mb-8">
+                <h1 class="font-heading text-4xl font-bold text-gray-800 mb-2">
+                    Scope <span class="text-primary">Clarification</span>
+                </h1>
+                <p class="text-gray-500 text-lg">Detailed breakdown of included services and project exclusions.</p>
+            </div>
+            <!-- Two Column Layout -->
+            <div class="flex-1 grid grid-cols-2 gap-12 relative">
+                <!-- Vertical Divider Line -->
+                <div class="divider-vertical"></div>
+                <!-- Left Column: Included -->
+                <div class="flex flex-col h-full">
+                    <div class="bg-white rounded-xl card-shadow p-8 h-full border-t-4 border-green-500 flex flex-col">
+                        <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
+                            <div class="circle-badge bg-green-50 text-green-600">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-heading text-2xl font-bold text-gray-800">Included</h2>
+                                <p class="text-gray-400 text-sm">Design Phase Services</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 space-y-4">
+                            <!-- Item 1 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle check-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-700">Complete Design Documentation</p>
+                                    <p class="text-sm text-gray-500 mt-1">Schematics, block diagrams, BOM, and
+                                        infrastructure plans as listed in deliverables.</p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle check-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-700">Design Revisions</p>
+                                    <p class="text-sm text-gray-500 mt-1">Two (2) rounds of comprehensive revisions to
+                                        ensure alignment with church needs.</p>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle check-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-700">Budget Estimation</p>
+                                    <p class="text-sm text-gray-500 mt-1">Detailed cost projections and phasing strategy
+                                        for future installation.</p>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle check-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-700">Meetings &amp; Coordination</p>
+                                    <p class="text-sm text-gray-500 mt-1">Remote and on-site meetings required for
+                                        design development.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Excluded -->
+                <div class="flex flex-col h-full">
+                    <div class="bg-white rounded-xl card-shadow p-8 h-full border-t-4 border-gray-400 flex flex-col">
+                        <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
+                            <div class="circle-badge bg-gray-100 text-gray-500">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-heading text-2xl font-bold text-gray-800">Excluded</h2>
+                                <p class="text-gray-400 text-sm">Future Phase / Third Party</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 space-y-4">
+                            <!-- Item 1 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-ban cross-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-600">Hardware Procurement</p>
+                                    <p class="text-sm text-gray-400 mt-1">Purchase of equipment beyond preliminary BOM
+                                        pricing/listing.</p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-ban cross-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-600">Installation Labor</p>
+                                    <p class="text-sm text-gray-400 mt-1">Physical installation, cabling, termination,
+                                        or on-site supervision.</p>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-ban cross-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-600">Electrical &amp; Structural Work</p>
+                                    <p class="text-sm text-gray-400 mt-1">High-voltage electrical, conduit installation,
+                                        or structural modifications.</p>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-ban cross-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-600">Furniture &amp; Décor</p>
+                                    <p class="text-sm text-gray-400 mt-1">Acoustic treatment, custom furniture, or
+                                        aesthetic elements.</p>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-ban cross-icon mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-600">Permits &amp; Fees</p>
+                                    <p class="text-sm text-gray-400 mt-1">Licensing, municipal permit fees, or
+                                        third-party inspections.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Footer -->
+            <div class="w-full py-4 mt-8 flex justify-between items-center bg-gray-50 border-t border-gray-200">
+                <p class="text-xs text-gray-400">Shore Christian Church - Sanctuary AV Design</p>
+                <div class="flex gap-2">
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/nav.js"></script>

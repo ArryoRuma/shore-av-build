@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Next Steps &amp; Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text-primary {
+            color: #2E5C8A;
+        }
+
+        .bg-primary {
+            background-color: #2E5C8A;
+        }
+
+        .text-secondary {
+            color: #4A90E2;
+        }
+
+        .bg-secondary {
+            background-color: #4A90E2;
+        }
+
+        .bg-light-blue {
+            background-color: #F0F7FF;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-card {
+            transition: transform 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(5px);
+        }
+
+        .step-line {
+            position: absolute;
+            left: 24px;
+            top: 40px;
+            bottom: 40px;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        .signature-line {
+            border-bottom: 2px solid #E5E7EB;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Top Bar -->
+        <div class="w-full h-2 bg-primary"></div>
+        <div class="w-full h-16 flex items-center justify-between px-12 border-b border-gray-100 bg-white">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-church text-secondary text-xl"></i>
+                <span class="font-heading font-semibold text-gray-500 uppercase tracking-widest text-sm">Shore Christian
+                    Church</span>
+            </div>
+            <span class="text-gray-400 text-sm">AV System Design Proposal</span>
+        </div>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex px-16 py-10 bg-gray-50">
+            <div class="grid grid-cols-2 gap-16 w-full h-full">
+                <!-- Left Column: Next Steps -->
+                <div class="flex flex-col h-full justify-center">
+                    <div class="mb-8">
+                        <h1 class="font-heading text-4xl font-bold text-gray-800 mb-2">
+                            Next <span class="text-primary">Steps</span>
+                        </h1>
+                        <p class="text-gray-500 text-lg">The path forward to your new AV design.</p>
+                    </div>
+                    <div class="relative pl-4 space-y-6">
+                        <!-- Vertical Line -->
+                        <div class="step-line"></div>
+                        <!-- Step 1 -->
+                        <div class="relative flex items-center gap-6 step-card z-10">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white shadow-md flex-shrink-0">
+                                <i class="fas fa-file-signature text-sm"></i>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
+                                <h3 class="font-heading font-bold text-gray-800 text-lg">Approve Proposal</h3>
+                                <p class="text-sm text-gray-500">Sign and return proposal to authorize the design phase.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="relative flex items-center gap-6 step-card z-10">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center border-4 border-secondary shadow-md flex-shrink-0">
+                                <i class="fas fa-ruler-combined text-sm"></i>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
+                                <h3 class="font-heading font-bold text-gray-800 text-lg">Kickoff &amp; Survey</h3>
+                                <p class="text-sm text-gray-500">Schedule on-site assessment and ministry needs intake.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="relative flex items-center gap-6 step-card z-10">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white text-gray-600 flex items-center justify-center border-4 border-gray-300 shadow-md flex-shrink-0">
+                                <i class="fas fa-sync-alt text-sm"></i>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
+                                <h3 class="font-heading font-bold text-gray-800 text-lg">Collaboration</h3>
+                                <p class="text-sm text-gray-500">Design development with scheduled review checkpoints.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="relative flex items-center gap-6 step-card z-10">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white text-gray-600 flex items-center justify-center border-4 border-gray-300 shadow-md flex-shrink-0">
+                                <i class="fas fa-box-open text-sm"></i>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
+                                <h3 class="font-heading font-bold text-gray-800 text-lg">Final Delivery</h3>
+                                <p class="text-sm text-gray-500">Presentation of full documentation package and budget.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Contact & Acceptance -->
+                <div class="flex flex-col h-full justify-center gap-8">
+                    <!-- Contact Card -->
+                    <div class="bg-white rounded-xl card-shadow p-8 border-t-4 border-primary relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-5">
+                            <i class="fas fa-envelope-open-text text-9xl text-primary"></i>
+                        </div>
+                        <h2 class="font-heading text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
+                        <div class="space-y-5 relative z-10">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Prepared By</p>
+                                    <p class="font-bold text-gray-800 text-lg">[Your Name / Company]</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Email</p>
+                                    <p class="text-gray-700">[Email Address]</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Phone</p>
+                                    <p class="text-gray-700">[Phone Number]</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Website / Address
+                                    </p>
+                                    <p class="text-gray-700">[Website URL or Physical Address]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Acceptance Box -->
+                    <div class="bg-gray-100 rounded-xl p-6 border border-gray-200">
+                        <div class="flex items-center gap-3 mb-4 text-gray-500">
+                            <i class="fas fa-pen-nib"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest">Acceptance</span>
+                        </div>
+                        <div class="mt-8 mb-2 signature-line"></div>
+                        <div class="flex justify-between text-xs text-gray-400">
+                            <p>Authorized Signature</p>
+                            <p>Date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="w-full py-4 px-12 flex justify-between items-center bg-white border-t border-gray-200 mt-auto">
+            <p class="text-xs text-gray-400">Shore Christian Church - Sanctuary AV Design</p>
+            <div class="flex gap-2">
+                <!-- 11 Dots for 11 Slides -->
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-primary"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/nav.js"></script>

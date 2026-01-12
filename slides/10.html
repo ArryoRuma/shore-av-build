@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Terms &amp; Timeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text-primary {
+            color: #2E5C8A;
+        }
+
+        .bg-primary {
+            background-color: #2E5C8A;
+        }
+
+        .text-secondary {
+            color: #4A90E2;
+        }
+
+        .bg-secondary {
+            background-color: #4A90E2;
+        }
+
+        .bg-light-blue {
+            background-color: #F0F7FF;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 24px;
+            left: 40px;
+            right: 40px;
+            height: 4px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        .timeline-progress {
+            position: absolute;
+            top: 24px;
+            left: 40px;
+            width: 100%;
+            /* Represents full completion capability */
+            height: 4px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        .timeline-node {
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .term-card {
+            transition: transform 0.2s ease;
+        }
+
+        .term-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Top Bar -->
+        <div class="w-full h-2 bg-primary"></div>
+        <div class="w-full h-16 flex items-center justify-between px-12 border-b border-gray-100 bg-white">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-church text-secondary text-xl"></i>
+                <span class="font-heading font-semibold text-gray-500 uppercase tracking-widest text-sm">Shore Christian
+                    Church</span>
+            </div>
+            <span class="text-gray-400 text-sm">AV System Design Proposal</span>
+        </div>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col px-16 py-10 bg-gray-50">
+            <!-- Header -->
+            <div class="mb-8">
+                <h1 class="font-heading text-4xl font-bold text-gray-800 mb-2">
+                    Timeline &amp; <span class="text-primary">Terms</span>
+                </h1>
+                <p class="text-gray-500 text-lg">Project schedule estimation and standard engagement conditions.</p>
+            </div>
+            <!-- Section 1: Timeline -->
+            <div class="bg-white rounded-xl card-shadow p-8 mb-8 border border-gray-100">
+                <div class="flex justify-between items-center mb-10">
+                    <h3 class="font-heading font-bold text-gray-700 text-xl"><i
+                            class="fas fa-calendar-alt text-secondary mr-2"></i>Estimated Duration: 3-5 Weeks</h3>
+                    <span class="px-3 py-1 bg-blue-50 text-primary text-sm font-semibold rounded-full">From Notice to
+                        Proceed</span>
+                </div>
+                <div class="relative px-4">
+                    <!-- Connecting Line -->
+                    <div class="timeline-line"></div>
+                    <!-- Nodes Container -->
+                    <div class="relative flex justify-between items-start">
+                        <!-- Node 1 -->
+                        <div class="flex flex-col items-center w-48 text-center timeline-node">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold border-4 border-white shadow-md mb-3">
+                                1
+                            </div>
+                            <h4 class="font-heading font-bold text-gray-800 text-sm">Kickoff</h4>
+                            <p class="text-xs text-gray-500 mt-1">Notice to Proceed &amp;<br />Site Survey</p>
+                        </div>
+                        <!-- Node 2 -->
+                        <div class="flex flex-col items-center w-48 text-center timeline-node">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center text-xl font-bold border-4 border-primary shadow-md mb-3">
+                                2
+                            </div>
+                            <h4 class="font-heading font-bold text-gray-800 text-sm">Design Phase</h4>
+                            <p class="text-xs text-gray-500 mt-1">Schematic Development &amp;<br />Equipment Selection
+                            </p>
+                        </div>
+                        <!-- Node 3 -->
+                        <div class="flex flex-col items-center w-48 text-center timeline-node">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center text-xl font-bold border-4 border-secondary shadow-md mb-3">
+                                3
+                            </div>
+                            <h4 class="font-heading font-bold text-gray-800 text-sm">Review Cycle</h4>
+                            <p class="text-xs text-gray-500 mt-1">Client Feedback &amp;<br />Revisions (x2)</p>
+                        </div>
+                        <!-- Node 4 -->
+                        <div class="flex flex-col items-center w-48 text-center timeline-node">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white text-gray-400 flex items-center justify-center text-xl font-bold border-4 border-gray-200 shadow-md mb-3">
+                                4
+                            </div>
+                            <h4 class="font-heading font-bold text-gray-800 text-sm">Final Delivery</h4>
+                            <p class="text-xs text-gray-500 mt-1">Documentation Package &amp;<br />Project Closeout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2: Terms Grid -->
+            <div class="grid grid-cols-2 gap-8 flex-1">
+                <!-- Revision Policy -->
+                <div
+                    class="bg-white rounded-xl card-shadow p-6 border-l-4 border-secondary term-card flex flex-col justify-center">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-pencil-alt text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-gray-800 text-lg mb-2">Revision Policy</h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                To ensure the design perfectly matches your needs, this proposal includes:
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span><strong>Two (2)</strong> comprehensive design revision rounds.</span>
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-plus-circle text-gray-400"></i>
+                                    <span>Additional revisions billed at standard hourly rate.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intellectual Property -->
+                <div
+                    class="bg-white rounded-xl card-shadow p-6 border-l-4 border-primary term-card flex flex-col justify-center">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-file-contract text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-gray-800 text-lg mb-2">Intellectual Property</h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                We believe you should own what you pay for.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                All final design documents, drawings, and equipment lists become the property of
+                                <strong>Shore Christian Church</strong> upon final payment. Proprietary internal tools
+                                or templates remain with the designer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="w-full py-4 px-12 flex justify-between items-center bg-white border-t border-gray-200 mt-auto">
+            <p class="text-xs text-gray-400">Shore Christian Church - Sanctuary AV Design</p>
+            <div class="flex gap-2">
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-primary"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/nav.js"></script>
