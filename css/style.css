@@ -1,0 +1,272 @@
+/* ============================================
+   Shore Christian Church AV Proposal
+   Central Style Sheet - Theme Tokens & Components
+   ============================================ */
+
+/* CSS Custom Properties (Theme Tokens) */
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #2E5C8A;
+  --color-secondary: #4A90E2;
+  
+  /* Neutral Colors */
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #f0f4f8;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  
+  /* Accent Colors */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-light: #F0F7FF;
+  
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  
+  /* Layout */
+  --slide-width: 1280px;
+  --slide-height: 720px;
+  --header-height: 72px;
+  --footer-height: 48px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+/* Base Slide Structure */
+body {
+  margin: 0;
+  padding: 0;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  font-family: var(--font-body);
+  background-color: var(--color-gray-50);
+  overflow: hidden;
+}
+
+.slide-container {
+  width: var(--slide-width);
+  height: var(--slide-height);
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Typography Classes */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Color Utility Classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.accent-blue-dark {
+  color: var(--color-primary);
+}
+
+.bg-blue-dark {
+  background-color: var(--color-primary);
+}
+
+.accent-blue-light {
+  color: var(--color-secondary);
+}
+
+.bg-blue-light {
+  background-color: var(--color-secondary);
+}
+
+.bg-light-blue {
+  background-color: var(--color-blue-light);
+}
+
+/* Common Component Styles */
+.decorative-shape {
+  position: absolute;
+  z-index: 0;
+}
+
+.content-card {
+  box-shadow: var(--shadow-md);
+  border-left: 5px solid var(--color-primary);
+}
+
+.card-shadow {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header Pattern (Consistent across slides 2-11) */
+.slide-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-header-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-primary);
+}
+
+.slide-header-content {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  border-bottom: 1px solid var(--color-gray-200);
+  background-color: white;
+}
+
+/* Footer Pattern (Consistent across all slides) */
+.slide-footer {
+  width: 100%;
+  padding: 16px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.slide-footer-text {
+  font-size: 12px;
+  color: var(--color-gray-400);
+}
+
+/* Progress Dots */
+.progress-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-300);
+}
+
+.progress-dot.active {
+  background-color: var(--color-primary);
+}
+
+/* List Styles */
+.list-bullet::before {
+  content: "\f058"; /* fa-circle-check */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--color-secondary);
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/* Icon Containers */
+.icon-circle {
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle-primary {
+  background-color: var(--color-blue-50);
+  color: var(--color-primary);
+}
+
+.icon-circle-secondary {
+  background-color: var(--color-blue-50);
+  color: var(--color-secondary);
+}
+
+/* Step Numbers (used in some slides) */
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 4rem;
+  color: rgba(46, 92, 138, 0.1);
+  line-height: 1;
+}
+
+/* Border Utilities */
+.border-left-accent {
+  border-left: 4px solid var(--color-secondary);
+}
+
+/* Signature Line */
+.signature-line {
+  border-bottom: 2px solid var(--color-gray-200);
+}
+
+/* Step Card Animation */
+.step-card {
+  transition: transform 0.2s ease;
+}
+
+.step-card:hover {
+  transform: translateX(5px);
+}
+
+/* Step Line (vertical timeline) */
+.step-line {
+  position: absolute;
+  left: 24px;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background-color: var(--color-gray-200);
+  z-index: 0;
+}

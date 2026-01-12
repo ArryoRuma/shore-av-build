@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <style>
         body {
             margin: 0;
@@ -93,16 +94,26 @@
             <div class="grid grid-cols-2 gap-16 text-left border-t border-gray-200 pt-8">
                 <div>
                     <p class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Date</p>
-                    <p class="font-heading text-xl text-gray-800">[Insert Date]</p>
+                    <p class="font-heading text-xl text-gray-800"><span class="config-date">January 2026</span></p>
                 </div>
                 <div>
                     <p class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Prepared By</p>
-                    <p class="font-heading text-xl text-gray-800">[Your Name / Company]</p>
+                    <p class="font-heading text-xl text-gray-800"><span class="config-prepared-by">Your Name / Company</span></p>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../js/config.js"></script>
+    <script src="../js/nav.js"></script>
+    <script>
+        // Populate config values
+        if (window.SITE_CONFIG) {
+            const dateEl = document.querySelector('.config-date');
+            const preparedByEl = document.querySelector('.config-prepared-by');
+            if (dateEl) dateEl.textContent = window.SITE_CONFIG.proposal.date;
+            if (preparedByEl) preparedByEl.textContent = window.SITE_CONFIG.contact.preparedBy;
+        }
+    </script>
 </body>
 
 </html>
-<script src="../js/nav.js"></script>

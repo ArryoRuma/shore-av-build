@@ -1,87 +1,100 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Shore Christian Church AV Proposal</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 1280px;
-            height: 720px;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
-            overflow: hidden;
-        }
-
-        .slide-container {
-            width: 1280px;
-            height: 720px;
-            position: relative;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .font-heading {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .accent-blue-dark {
-            color: #2E5C8A;
-        }
-
-        .bg-blue-dark {
-            background-color: #2E5C8A;
-        }
-
-        .accent-blue-light {
-            color: #4A90E2;
-        }
-
-        .bg-blue-light {
-            background-color: #4A90E2;
-        }
-
-        .decorative-shape {
-            position: absolute;
-            z-index: 0;
-        }
-    </style>
+    <link href="./css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-<div style="padding:40px; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;">
-  <h1 style="font-size:32px; margin-bottom:16px;">Shore Christian Church AV Proposal</h1>
-  <p style="margin-bottom:24px;">Use the links below to navigate the proposal slides.</p>
+    <div class="slide-container">
+        <!-- Decorative top bar -->
+        <div class="w-full h-2 bg-primary"></div>
+        
+        <!-- Main content -->
+        <div class="flex-1 flex items-center justify-center bg-gray-50">
+            <div class="max-w-3xl mx-auto px-12 py-10">
+                <!-- Header section -->
+                <div class="text-center mb-12">
+                    <div class="mb-6 inline-block p-5 rounded-full bg-blue-50">
+                        <i class="fas fa-church text-5xl text-primary"></i>
+                    </div>
+                    <h1 class="font-heading text-5xl font-bold text-gray-800 mb-4">
+                        Shore Christian Church
+                    </h1>
+                    <div class="w-24 h-1 bg-secondary mx-auto mb-4"></div>
+                    <p class="font-heading text-2xl text-secondary mb-2">AV System Design Proposal</p>
+                    <p class="text-gray-500 text-lg">Sanctuary AV System Design (Design-Only)</p>
+                </div>
 
-  <p style="margin-bottom:24px;">
-    <a href="./slides/1.html" style="font-size:18px; font-weight:600;">Start → Slide 1</a>
-  </p>
+                <!-- Start button -->
+                <div class="text-center mb-8">
+                    <a href="./slides/1.html" 
+                       class="inline-block px-8 py-4 bg-primary text-white font-heading font-semibold text-lg rounded-lg shadow-md hover:bg-secondary transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-play-circle mr-2"></i>
+                        Start Presentation
+                    </a>
+                </div>
 
-  <ol style="line-height:2;">
-    <li><a href="./slides/1.html">Slide 1</a></li>
-    <li><a href="./slides/2.html">Slide 2</a></li>
-    <li><a href="./slides/3.html">Slide 3</a></li>
-    <li><a href="./slides/4.html">Slide 4</a></li>
-    <li><a href="./slides/5.html">Slide 5</a></li>
-    <li><a href="./slides/6.html">Slide 6</a></li>
-    <li><a href="./slides/7.html">Slide 7</a></li>
-    <li><a href="./slides/8.html">Slide 8</a></li>
-    <li><a href="./slides/9.html">Slide 9</a></li>
-    <li><a href="./slides/10.html">Slide 10</a></li>
-    <li><a href="./slides/11.html">Slide 11</a></li>
-  </ol>
-</div>
+                <!-- Slide navigation -->
+                <div class="bg-white rounded-xl shadow-md p-8 border-t-4 border-primary">
+                    <h2 class="font-heading text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-list-ol text-secondary"></i>
+                        Slide Navigation
+                    </h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="./slides/1.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 1 - Cover
+                        </a>
+                        <a href="./slides/2.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 2 - Introduction
+                        </a>
+                        <a href="./slides/3.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 3 - Understanding
+                        </a>
+                        <a href="./slides/4.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 4 - Design Principles
+                        </a>
+                        <a href="./slides/5.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 5 - Scope Part 1
+                        </a>
+                        <a href="./slides/6.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 6 - Scope Part 2
+                        </a>
+                        <a href="./slides/7.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 7 - Deliverables
+                        </a>
+                        <a href="./slides/8.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 8 - Timeline
+                        </a>
+                        <a href="./slides/9.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 9 - Investment
+                        </a>
+                        <a href="./slides/10.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 10 - Why Choose Us
+                        </a>
+                        <a href="./slides/11.html" class="px-4 py-3 bg-gray-50 hover:bg-blue-50 rounded-lg border border-gray-200 hover:border-secondary transition-all text-gray-700 hover:text-primary font-medium">
+                            <i class="fas fa-file-alt mr-2 text-secondary"></i>Slide 11 - Next Steps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="mt-6 text-center text-sm text-gray-500">
+                    <p><i class="fas fa-keyboard mr-2"></i>Use arrow keys to navigate between slides</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <p class="slide-footer-text">Shore Christian Church - Sanctuary AV Design</p>
+            <p class="slide-footer-text">© 2026 All Rights Reserved</p>
+        </div>
+    </div>
 </body>
-
 </html>

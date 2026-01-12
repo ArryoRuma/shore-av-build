@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <style>
         body {
             margin: 0;
@@ -176,7 +177,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Prepared By</p>
-                                    <p class="font-bold text-gray-800 text-lg">[Your Name / Company]</p>
+                                    <p class="font-bold text-gray-800 text-lg"><span class="config-prepared-by">Your Name / Company</span></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -186,7 +187,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Email</p>
-                                    <p class="text-gray-700">[Email Address]</p>
+                                    <p class="text-gray-700"><span class="config-email">contact@example.com</span></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -196,7 +197,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Phone</p>
-                                    <p class="text-gray-700">[Phone Number]</p>
+                                    <p class="text-gray-700"><span class="config-phone">(555) 123-4567</span></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -207,7 +208,7 @@
                                 <div>
                                     <p class="text-xs text-gray-400 uppercase tracking-wide font-bold">Website / Address
                                     </p>
-                                    <p class="text-gray-700">[Website URL or Physical Address]</p>
+                                    <p class="text-gray-700"><span class="config-website">www.example.com</span></p>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +247,22 @@
             </div>
         </div>
     </div>
+    <script src="../js/config.js"></script>
+    <script src="../js/nav.js"></script>
+    <script>
+        // Populate config values
+        if (window.SITE_CONFIG) {
+            const preparedByEl = document.querySelector('.config-prepared-by');
+            const emailEl = document.querySelector('.config-email');
+            const phoneEl = document.querySelector('.config-phone');
+            const websiteEl = document.querySelector('.config-website');
+            
+            if (preparedByEl) preparedByEl.textContent = window.SITE_CONFIG.contact.preparedBy;
+            if (emailEl) emailEl.textContent = window.SITE_CONFIG.contact.email;
+            if (phoneEl) phoneEl.textContent = window.SITE_CONFIG.contact.phone;
+            if (websiteEl) websiteEl.textContent = window.SITE_CONFIG.contact.website;
+        }
+    </script>
 </body>
 
 </html>
-<script src="../js/nav.js"></script>
