@@ -1,272 +1,289 @@
-/* ============================================
-   Shore Christian Church AV Proposal
-   Central Style Sheet - Theme Tokens & Components
-   ============================================ */
-
-/* CSS Custom Properties (Theme Tokens) */
-:root {
-  /* Primary Brand Colors */
-  --color-primary: #2E5C8A;
-  --color-secondary: #4A90E2;
-  
-  /* Neutral Colors */
-  --color-gray-50: #f8f9fa;
-  --color-gray-100: #f0f4f8;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  
-  /* Accent Colors */
-  --color-blue-50: #eff6ff;
-  --color-blue-100: #dbeafe;
-  --color-blue-light: #F0F7FF;
-  
-  /* Typography */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
-  
-  /* Spacing Scale */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  
-  /* Layout */
-  --slide-width: 1280px;
-  --slide-height: 720px;
-  --header-height: 72px;
-  --footer-height: 48px;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 9999px;
-}
-
-/* Base Slide Structure */
+/* Base styles */
 body {
-  margin: 0;
-  padding: 0;
-  width: var(--slide-width);
-  height: var(--slide-height);
-  font-family: var(--font-body);
-  background-color: var(--color-gray-50);
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 720px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    overflow: hidden;
 }
 
 .slide-container {
-  width: var(--slide-width);
-  height: var(--slide-height);
-  position: relative;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* Typography Classes */
+/* Typography */
 .font-heading {
-  font-family: var(--font-heading);
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Color Utility Classes */
-.text-primary {
-  color: var(--color-primary);
-}
-
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
-.text-secondary {
-  color: var(--color-secondary);
-}
-
-.bg-secondary {
-  background-color: var(--color-secondary);
-}
-
+/* Color classes - Primary (Dark Blue) */
 .accent-blue-dark {
-  color: var(--color-primary);
+    color: #2E5C8A;
 }
 
 .bg-blue-dark {
-  background-color: var(--color-primary);
+    background-color: #2E5C8A;
 }
 
+.text-primary {
+    color: #2E5C8A;
+}
+
+.bg-primary {
+    background-color: #2E5C8A;
+}
+
+/* Color classes - Secondary (Light Blue) */
 .accent-blue-light {
-  color: var(--color-secondary);
+    color: #4A90E2;
 }
 
 .bg-blue-light {
-  background-color: var(--color-secondary);
+    background-color: #4A90E2;
 }
 
+.text-secondary {
+    color: #4A90E2;
+}
+
+.bg-secondary {
+    background-color: #4A90E2;
+}
+
+/* Additional background colors */
 .bg-light-blue {
-  background-color: var(--color-blue-light);
+    background-color: #F0F7FF;
 }
 
-/* Common Component Styles */
+.bg-success-light {
+    background-color: #ECFDF5;
+}
+
+.text-success {
+    color: #059669;
+}
+
+.bg-gray-light {
+    background-color: #F3F4F6;
+}
+
+/* Decorative shapes */
 .decorative-shape {
-  position: absolute;
-  z-index: 0;
+    position: absolute;
+    z-index: 0;
 }
 
+/* Cards and shadows */
 .content-card {
-  box-shadow: var(--shadow-md);
-  border-left: 5px solid var(--color-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #2E5C8A;
 }
 
 .card-shadow {
-  box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.price-card {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Borders */
+.border-left-accent {
+    border-left: 4px solid #4A90E2;
+}
+
+/* List bullets */
+.list-bullet::before {
+    content: "\f058";
+    /* fa-circle-check */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #4A90E2;
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/* Custom scrollbar hiding */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hover effects and transitions */
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .card-transition {
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+.deliverable-item {
+    transition: transform 0.2s ease;
 }
 
-/* Header Pattern (Consistent across slides 2-11) */
-.slide-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.deliverable-item:hover {
+    transform: translateX(10px);
 }
 
-.slide-header-bar {
-  width: 100%;
-  height: 8px;
-  background-color: var(--color-primary);
+.schedule-item {
+    transition: all 0.3s ease;
 }
 
-.slide-header-content {
-  width: 100%;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 48px;
-  border-bottom: 1px solid var(--color-gray-200);
-  background-color: white;
+.schedule-item:hover {
+    transform: translateX(5px);
+    background-color: #F8FAFC;
 }
 
-/* Footer Pattern (Consistent across all slides) */
-.slide-footer {
-  width: 100%;
-  padding: 16px 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border-top: 1px solid var(--color-gray-200);
+.term-card {
+    transition: transform 0.2s ease;
 }
 
-.slide-footer-text {
-  font-size: 12px;
-  color: var(--color-gray-400);
+.term-card:hover {
+    transform: translateY(-2px);
 }
 
-/* Progress Dots */
-.progress-dots {
-  display: flex;
-  gap: 8px;
-}
-
-.progress-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--color-gray-300);
-}
-
-.progress-dot.active {
-  background-color: var(--color-primary);
-}
-
-/* List Styles */
-.list-bullet::before {
-  content: "\f058"; /* fa-circle-check */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  color: var(--color-secondary);
-  margin-right: 12px;
-  font-size: 1.2rem;
-}
-
-/* Icon Containers */
-.icon-circle {
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-circle-primary {
-  background-color: var(--color-blue-50);
-  color: var(--color-primary);
-}
-
-.icon-circle-secondary {
-  background-color: var(--color-blue-50);
-  color: var(--color-secondary);
-}
-
-/* Step Numbers (used in some slides) */
-.step-number {
-  position: absolute;
-  top: -15px;
-  right: -10px;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 4rem;
-  color: rgba(46, 92, 138, 0.1);
-  line-height: 1;
-}
-
-/* Border Utilities */
-.border-left-accent {
-  border-left: 4px solid var(--color-secondary);
-}
-
-/* Signature Line */
-.signature-line {
-  border-bottom: 2px solid var(--color-gray-200);
-}
-
-/* Step Card Animation */
 .step-card {
-  transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .step-card:hover {
-  transform: translateX(5px);
+    transform: translateX(5px);
 }
 
-/* Step Line (vertical timeline) */
+/* Step numbers */
+.step-number {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    color: rgba(46, 92, 138, 0.1);
+    line-height: 1;
+}
+
+/* Icons */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #F0F7FF;
+    color: #2E5C8A;
+    flex-shrink: 0;
+}
+
+.check-icon {
+    color: #059669;
+    /* Green-600 */
+}
+
+.cross-icon {
+    color: #9CA3AF;
+    /* Gray-400 */
+}
+
+.circle-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Dividers */
+.divider {
+    height: 100%;
+    width: 1px;
+    background-color: #e5e7eb;
+}
+
+.divider-vertical {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background-color: #E5E7EB;
+    transform: translateX(-50%);
+}
+
+/* Timeline elements */
+.timeline-line {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    width: 100%;
+    /* Represents full completion capability */
+    height: 4px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+.timeline-node {
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
 .step-line {
-  position: absolute;
-  left: 24px;
-  top: 40px;
-  bottom: 40px;
-  width: 2px;
-  background-color: var(--color-gray-200);
-  z-index: 0;
+    position: absolute;
+    left: 24px;
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+/* Signature */
+.signature-line {
+    border-bottom: 2px solid #E5E7EB;
+}
+
+/* Index page styles */
+.index-container {
+    padding: 40px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.index-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.index-paragraph {
+    margin-bottom: 24px;
+}
+
+.index-start-link {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.index-list {
+    line-height: 2;
 }
