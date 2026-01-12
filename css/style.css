@@ -1,0 +1,289 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 720px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.slide-container {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Typography */
+.font-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Color classes - Primary (Dark Blue) */
+.accent-blue-dark {
+    color: #2E5C8A;
+}
+
+.bg-blue-dark {
+    background-color: #2E5C8A;
+}
+
+.text-primary {
+    color: #2E5C8A;
+}
+
+.bg-primary {
+    background-color: #2E5C8A;
+}
+
+/* Color classes - Secondary (Light Blue) */
+.accent-blue-light {
+    color: #4A90E2;
+}
+
+.bg-blue-light {
+    background-color: #4A90E2;
+}
+
+.text-secondary {
+    color: #4A90E2;
+}
+
+.bg-secondary {
+    background-color: #4A90E2;
+}
+
+/* Additional background colors */
+.bg-light-blue {
+    background-color: #F0F7FF;
+}
+
+.bg-success-light {
+    background-color: #ECFDF5;
+}
+
+.text-success {
+    color: #059669;
+}
+
+.bg-gray-light {
+    background-color: #F3F4F6;
+}
+
+/* Decorative shapes */
+.decorative-shape {
+    position: absolute;
+    z-index: 0;
+}
+
+/* Cards and shadows */
+.content-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #2E5C8A;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.price-card {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Borders */
+.border-left-accent {
+    border-left: 4px solid #4A90E2;
+}
+
+/* List bullets */
+.list-bullet::before {
+    content: "\f058";
+    /* fa-circle-check */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #4A90E2;
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/* Custom scrollbar hiding */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hover effects and transitions */
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.deliverable-item {
+    transition: transform 0.2s ease;
+}
+
+.deliverable-item:hover {
+    transform: translateX(10px);
+}
+
+.schedule-item {
+    transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+    transform: translateX(5px);
+    background-color: #F8FAFC;
+}
+
+.term-card {
+    transition: transform 0.2s ease;
+}
+
+.term-card:hover {
+    transform: translateY(-2px);
+}
+
+.step-card {
+    transition: transform 0.2s ease;
+}
+
+.step-card:hover {
+    transform: translateX(5px);
+}
+
+/* Step numbers */
+.step-number {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    color: rgba(46, 92, 138, 0.1);
+    line-height: 1;
+}
+
+/* Icons */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #F0F7FF;
+    color: #2E5C8A;
+    flex-shrink: 0;
+}
+
+.check-icon {
+    color: #059669;
+    /* Green-600 */
+}
+
+.cross-icon {
+    color: #9CA3AF;
+    /* Gray-400 */
+}
+
+.circle-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Dividers */
+.divider {
+    height: 100%;
+    width: 1px;
+    background-color: #e5e7eb;
+}
+
+.divider-vertical {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background-color: #E5E7EB;
+    transform: translateX(-50%);
+}
+
+/* Timeline elements */
+.timeline-line {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    width: 100%;
+    /* Represents full completion capability */
+    height: 4px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+.timeline-node {
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.step-line {
+    position: absolute;
+    left: 24px;
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+/* Signature */
+.signature-line {
+    border-bottom: 2px solid #E5E7EB;
+}
+
+/* Index page styles */
+.index-container {
+    padding: 40px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.index-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.index-paragraph {
+    margin-bottom: 24px;
+}
+
+.index-start-link {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.index-list {
+    line-height: 2;
+}
