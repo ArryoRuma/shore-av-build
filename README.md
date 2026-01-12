@@ -71,9 +71,11 @@ The design uses CSS custom properties (variables) defined in `/css/style.css`. U
 
 - **Arrow Keys**: Use ← → or PageUp/PageDown to navigate between slides
 - **Navigation Buttons**: Each slide has Prev/Index/Next buttons at the bottom
+- **Fullscreen Mode**: Click the fullscreen button or press `F` to enter/exit fullscreen mode
 - **Keyboard Shortcuts**:
   - `Home` - Jump to first slide
   - `End` - Jump to last slide
+  - `F` - Toggle fullscreen mode
 
 ## 📄 Slides Overview
 

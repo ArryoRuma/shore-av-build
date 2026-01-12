@@ -9,6 +9,17 @@ body {
     overflow: hidden;
 }
 
+/* Fullscreen mode styles */
+body.fullscreen-mode {
+    width: 100vw;
+    height: 100vh;
+}
+
+body.fullscreen-mode .slide-container {
+    width: 100vw;
+    height: 100vh;
+}
+
 .slide-container {
     width: 1280px;
     height: 720px;
