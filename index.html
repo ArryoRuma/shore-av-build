@@ -15,21 +15,19 @@
         body {
             margin: 0;
             padding: 0;
-            width: 1280px;
-            height: 720px;
+            min-height: 100vh;
             font-family: 'Open Sans', sans-serif;
             background-color: #f8f9fa;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .slide-container {
-            width: 1280px;
-            height: 720px;
-            position: relative;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
+        .content-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            padding: 40px;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
         }
 
         .font-heading {
@@ -51,16 +49,11 @@
         .bg-blue-light {
             background-color: #4A90E2;
         }
-
-        .decorative-shape {
-            position: absolute;
-            z-index: 0;
-        }
     </style>
 </head>
 
 <body>
-<div style="padding:40px; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;">
+<div class="content-wrapper">
   <h1 style="font-size:32px; margin-bottom:16px;">Shore Christian Church AV Proposal</h1>
   <p style="margin-bottom:24px;">Use the links below to navigate the proposal slides.</p>
 
