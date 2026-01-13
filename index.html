@@ -58,51 +58,8 @@
                 </p>
                 
                 <!-- Slide Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
-                    <a href="./slides/1.html" class="slide-card">
-                        <div class="slide-number">01</div>
-                        <div class="slide-title">Cover</div>
-                    </a>
-                    <a href="./slides/2.html" class="slide-card">
-                        <div class="slide-number">02</div>
-                        <div class="slide-title">Welcome</div>
-                    </a>
-                    <a href="./slides/3.html" class="slide-card">
-                        <div class="slide-number">03</div>
-                        <div class="slide-title">Project Understanding</div>
-                    </a>
-                    <a href="./slides/4.html" class="slide-card">
-                        <div class="slide-number">04</div>
-                        <div class="slide-title">Design Principles</div>
-                    </a>
-                    <a href="./slides/5.html" class="slide-card">
-                        <div class="slide-number">05</div>
-                        <div class="slide-title">Scope (Part 1)</div>
-                    </a>
-                    <a href="./slides/6.html" class="slide-card">
-                        <div class="slide-number">06</div>
-                        <div class="slide-title">Scope (Part 2)</div>
-                    </a>
-                    <a href="./slides/7.html" class="slide-card">
-                        <div class="slide-number">07</div>
-                        <div class="slide-title">Deliverables</div>
-                    </a>
-                    <a href="./slides/8.html" class="slide-card">
-                        <div class="slide-number">08</div>
-                        <div class="slide-title">Timeline</div>
-                    </a>
-                    <a href="./slides/9.html" class="slide-card">
-                        <div class="slide-number">09</div>
-                        <div class="slide-title">Investment</div>
-                    </a>
-                    <a href="./slides/10.html" class="slide-card">
-                        <div class="slide-number">10</div>
-                        <div class="slide-title">Why Choose Us</div>
-                    </a>
-                    <a href="./slides/11.html" class="slide-card">
-                        <div class="slide-number">11</div>
-                        <div class="slide-title">Next Steps</div>
-                    </a>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12" id="slide-grid">
+                    <!-- Slides will be dynamically generated here -->
                 </div>
                 
                 <!-- Navigation Instructions -->
@@ -158,6 +115,30 @@
             preparedByEls.forEach(el => {
                 if (el) el.textContent = window.SITE_CONFIG.contact.preparedBy;
             });
+        }
+        
+        // Generate slide grid from metadata
+        if (window.SLIDES) {
+            const slideGrid = document.getElementById('slide-grid');
+            if (slideGrid) {
+                window.SLIDES.forEach(slide => {
+                    const card = document.createElement('a');
+                    card.href = slide.url;
+                    card.className = 'slide-card';
+                    
+                    const number = document.createElement('div');
+                    number.className = 'slide-number';
+                    number.textContent = slide.number.toString().padStart(2, '0');
+                    
+                    const title = document.createElement('div');
+                    title.className = 'slide-title';
+                    title.textContent = slide.title;
+                    
+                    card.appendChild(number);
+                    card.appendChild(title);
+                    slideGrid.appendChild(card);
+                });
+            }
         }
     </script>
 </body>
