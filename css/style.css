@@ -43,25 +43,25 @@ body.fullscreen-mode .slide-container {
     .slide-container {
         max-width: 100%;
         min-height: 100vh;
-        aspect-ratio: auto;
+        aspect-ratio: auto; /* Override aspect ratio on mobile for full height content */
     }
 }
 
-@media (min-width: 48.0625rem) and (max-width: 64rem) { /* 769px - 1024px - Tablet */
+@media (min-width: 48.5rem) and (max-width: 64rem) { /* 776px - 1024px - Tablet */
     .slide-container {
         max-width: 48rem; /* 768px */
         min-height: 36rem; /* 576px */
     }
 }
 
-@media (min-width: 64.0625rem) and (max-width: 90rem) { /* 1025px - 1440px - Desktop */
+@media (min-width: 64.5rem) and (max-width: 90rem) { /* 1032px - 1440px - Desktop */
     .slide-container {
         max-width: 80rem; /* 1280px - original size */
         min-height: 45rem; /* 720px - original size */
     }
 }
 
-@media (min-width: 90.0625rem) { /* 1441px+ - Large Desktop */
+@media (min-width: 90.5rem) { /* 1448px+ - Large Desktop */
     .slide-container {
         max-width: 90rem; /* 1440px */
         min-height: 50.625rem; /* 810px */
