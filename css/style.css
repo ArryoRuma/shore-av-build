@@ -266,11 +266,11 @@ body.fullscreen-mode .slide-container {
 /* Step numbers */
 .step-number {
     position: absolute;
-    top: -0.9375rem;
-    right: -0.625rem;
+    top: 0.5rem;
+    right: 0.75rem;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: rgba(46, 92, 138, 0.1);
     line-height: 1;
 }
