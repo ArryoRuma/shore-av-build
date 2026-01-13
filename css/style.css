@@ -2,11 +2,13 @@
 body {
     margin: 0;
     padding: 0;
-    width: 1280px;
-    height: 720px;
+    width: 100%;
+    min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
     background-color: #f8f9fa;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Fullscreen mode styles */
@@ -18,16 +20,52 @@ body.fullscreen-mode {
 body.fullscreen-mode .slide-container {
     width: 100vw;
     height: 100vh;
+    max-width: none;
+    max-height: none;
 }
 
 .slide-container {
-    width: 1280px;
-    height: 720px;
+    width: 100%;
+    max-width: 90rem; /* 1440px at 16px base - larger than original 1280px */
+    height: auto;
+    min-height: 50rem; /* 800px at 16px base - larger than original 720px */
+    aspect-ratio: 16 / 9;
     position: relative;
     background-color: white;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive breakpoints for slide container */
+@media (max-width: 48rem) { /* 768px - Mobile */
+    .slide-container {
+        max-width: 100%;
+        min-height: 100vh;
+        aspect-ratio: auto; /* Override aspect ratio on mobile for full height content */
+    }
+}
+
+@media (min-width: 48.0625rem) and (max-width: 64rem) { /* 769px - 1024px - Tablet */
+    .slide-container {
+        max-width: 48rem; /* 768px */
+        min-height: 36rem; /* 576px */
+    }
+}
+
+@media (min-width: 64.0625rem) and (max-width: 90rem) { /* 1025px - 1440px - Desktop */
+    .slide-container {
+        max-width: 80rem; /* 1280px - original size */
+        min-height: 45rem; /* 720px - original size */
+    }
+}
+
+@media (min-width: 90.0625rem) { /* 1441px+ - Large Desktop */
+    .slide-container {
+        max-width: 90rem; /* 1440px */
+        min-height: 50.625rem; /* 810px */
+    }
 }
 
 /* Typography */
@@ -94,21 +132,21 @@ body.fullscreen-mode .slide-container {
 
 /* Cards and shadows */
 .content-card {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border-left: 5px solid #2E5C8A;
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06);
+    border-left: 0.3125rem solid #2E5C8A;
 }
 
 .card-shadow {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.03);
 }
 
 .price-card {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1.25rem 1.5625rem -0.3125rem rgba(0, 0, 0, 0.1), 0 0.625rem 0.625rem -0.3125rem rgba(0, 0, 0, 0.04);
 }
 
 /* Borders */
 .border-left-accent {
-    border-left: 4px solid #4A90E2;
+    border-left: 0.25rem solid #4A90E2;
 }
 
 /* List bullets */
@@ -118,7 +156,7 @@ body.fullscreen-mode .slide-container {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: #4A90E2;
-    margin-right: 12px;
+    margin-right: 0.75rem;
     font-size: 1.2rem;
 }
 
@@ -129,8 +167,8 @@ body.fullscreen-mode .slide-container {
 
 /* Hover effects and transitions */
 .card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.1), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.05);
 }
 
 .card-transition {
@@ -142,7 +180,7 @@ body.fullscreen-mode .slide-container {
 }
 
 .deliverable-item:hover {
-    transform: translateX(10px);
+    transform: translateX(0.625rem);
 }
 
 .schedule-item {
@@ -150,7 +188,7 @@ body.fullscreen-mode .slide-container {
 }
 
 .schedule-item:hover {
-    transform: translateX(5px);
+    transform: translateX(0.3125rem);
     background-color: #F8FAFC;
 }
 
@@ -159,7 +197,7 @@ body.fullscreen-mode .slide-container {
 }
 
 .term-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
 }
 
 .step-card {
@@ -167,14 +205,14 @@ body.fullscreen-mode .slide-container {
 }
 
 .step-card:hover {
-    transform: translateX(5px);
+    transform: translateX(0.3125rem);
 }
 
 /* Step numbers */
 .step-number {
     position: absolute;
-    top: -15px;
-    right: -10px;
+    top: -0.9375rem;
+    right: -0.625rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 4rem;
@@ -184,8 +222,8 @@ body.fullscreen-mode .slide-container {
 
 /* Icons */
 .icon-circle {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,8 +244,8 @@ body.fullscreen-mode .slide-container {
 }
 
 .circle-badge {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -219,7 +257,7 @@ body.fullscreen-mode .slide-container {
 /* Dividers */
 .divider {
     height: 100%;
-    width: 1px;
+    width: 0.0625rem;
     background-color: #e5e7eb;
 }
 
@@ -228,7 +266,7 @@ body.fullscreen-mode .slide-container {
     left: 50%;
     top: 10%;
     bottom: 10%;
-    width: 1px;
+    width: 0.0625rem;
     background-color: #E5E7EB;
     transform: translateX(-50%);
 }
@@ -236,21 +274,21 @@ body.fullscreen-mode .slide-container {
 /* Timeline elements */
 .timeline-line {
     position: absolute;
-    top: 24px;
-    left: 40px;
-    right: 40px;
-    height: 4px;
+    top: 1.5rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    height: 0.25rem;
     background-color: #E5E7EB;
     z-index: 0;
 }
 
 .timeline-progress {
     position: absolute;
-    top: 24px;
-    left: 40px;
+    top: 1.5rem;
+    left: 2.5rem;
     width: 100%;
     /* Represents full completion capability */
-    height: 4px;
+    height: 0.25rem;
     background-color: #E5E7EB;
     z-index: 0;
 }
@@ -262,36 +300,36 @@ body.fullscreen-mode .slide-container {
 
 .step-line {
     position: absolute;
-    left: 24px;
-    top: 40px;
-    bottom: 40px;
-    width: 2px;
+    left: 1.5rem;
+    top: 2.5rem;
+    bottom: 2.5rem;
+    width: 0.125rem;
     background-color: #E5E7EB;
     z-index: 0;
 }
 
 /* Signature */
 .signature-line {
-    border-bottom: 2px solid #E5E7EB;
+    border-bottom: 0.125rem solid #E5E7EB;
 }
 
 /* Index page styles */
 .index-container {
-    padding: 40px;
+    padding: 2.5rem;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 .index-title {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .index-paragraph {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .index-start-link {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
 }
 
@@ -313,20 +351,20 @@ body.fullscreen-mode .slide-container {
     border-radius: 0.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06);
 }
 
 .cta-button:hover {
     background-color: #244a6e;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.15), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.1);
 }
 
 .slide-card {
     display: block;
     padding: 1.5rem;
     background: white;
-    border: 2px solid #E5E7EB;
+    border: 0.125rem solid #E5E7EB;
     border-radius: 0.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -335,8 +373,8 @@ body.fullscreen-mode .slide-container {
 
 .slide-card:hover {
     border-color: #2E5C8A;
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.1), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.05);
 }
 
 .slide-card .slide-number {
@@ -369,8 +407,8 @@ body.fullscreen-mode .slide-container {
     font-size: 0.875rem;
     color: #374151;
     background-color: white;
-    border: 1px solid #D1D5DB;
+    border: 0.0625rem solid #D1D5DB;
     border-radius: 0.25rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.05);
     margin-right: 0.5rem;
 }
