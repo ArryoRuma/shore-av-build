@@ -51,6 +51,10 @@
     --border-width-md: 0.125rem;
     --border-width-lg: 0.25rem;
     --border-accent-width: 0.3125rem;
+    
+    /* Transitions */
+    --transition-duration: 300ms;
+    --transition-timing: ease-in-out;
 }
 
 /* Base styles */
@@ -91,6 +95,37 @@ body.fullscreen-mode .slide-container {
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    /* Slide transition styles */
+    opacity: 0;
+    animation: slideIn var(--transition-duration) var(--transition-timing) forwards;
+}
+
+/* Keyframe animations for slide transitions */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+/* Class to trigger slide-out animation */
+.slide-container.slide-out {
+    animation: slideOut var(--transition-duration) var(--transition-timing) forwards;
 }
 
 /* Responsive breakpoints for slide container */

@@ -8,7 +8,23 @@
   // Navigation functions
   function goToSlide(n) {
     if (n < 1 || n > total) return;
-    location.href = `${n}.html`;
+    animateSlideTransition(`${n}.html`);
+  }
+
+  function animateSlideTransition(targetUrl) {
+    const container = document.querySelector('.slide-container');
+    if (container) {
+      // Add slide-out class to trigger animation
+      container.classList.add('slide-out');
+      
+      // Navigate after animation completes
+      setTimeout(() => {
+        location.href = targetUrl;
+      }, 300); // Match transition duration
+    } else {
+      // Fallback if no container found
+      location.href = targetUrl;
+    }
   }
 
   function updateFullscreenIcon(isFullscreen) {
@@ -29,11 +45,21 @@
   prev.className = "slide-nav__button";
   prev.href = current > 1 ? `${current - 1}.html` : `1.html`;
   prev.textContent = "← Prev";
+  prev.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetSlide = current > 1 ? current - 1 : 1;
+    goToSlide(targetSlide);
+  });
 
   const next = document.createElement("a");
   next.className = "slide-nav__button";
   next.href = current < total ? `${current + 1}.html` : `${total}.html`;
   next.textContent = "Next →";
+  next.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetSlide = current < total ? current + 1 : total;
+    goToSlide(targetSlide);
+  });
 
   const home = document.createElement("a");
   home.className = "slide-nav__button";
