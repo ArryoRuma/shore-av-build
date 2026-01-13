@@ -4,6 +4,7 @@
 
   const current = parseInt(match[1], 10);
   const total = window.SLIDES ? window.SLIDES.length : 11; // Use metadata if available
+  const TRANSITION_DURATION = 300; // Match CSS --transition-duration
 
   // Navigation functions
   function goToSlide(n) {
@@ -20,7 +21,7 @@
       // Navigate after animation completes
       setTimeout(() => {
         location.href = targetUrl;
-      }, 300); // Match transition duration
+      }, TRANSITION_DURATION);
     } else {
       // Fallback if no container found
       location.href = targetUrl;
@@ -41,24 +42,24 @@
   const nav = document.createElement("div");
   nav.className = "slide-nav";
 
+  const prevSlide = current > 1 ? current - 1 : 1;
   const prev = document.createElement("a");
   prev.className = "slide-nav__button";
-  prev.href = current > 1 ? `${current - 1}.html` : `1.html`;
+  prev.href = `${prevSlide}.html`;
   prev.textContent = "← Prev";
   prev.addEventListener('click', (e) => {
     e.preventDefault();
-    const targetSlide = current > 1 ? current - 1 : 1;
-    goToSlide(targetSlide);
+    goToSlide(prevSlide);
   });
 
+  const nextSlide = current < total ? current + 1 : total;
   const next = document.createElement("a");
   next.className = "slide-nav__button";
-  next.href = current < total ? `${current + 1}.html` : `${total}.html`;
+  next.href = `${nextSlide}.html`;
   next.textContent = "Next →";
   next.addEventListener('click', (e) => {
     e.preventDefault();
-    const targetSlide = current < total ? current + 1 : total;
-    goToSlide(targetSlide);
+    goToSlide(nextSlide);
   });
 
   const home = document.createElement("a");
