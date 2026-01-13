@@ -4,11 +4,28 @@
 
   const current = parseInt(match[1], 10);
   const total = window.SLIDES ? window.SLIDES.length : 11; // Use metadata if available
+  const TRANSITION_DURATION = 300; // Match CSS --transition-duration
 
   // Navigation functions
   function goToSlide(n) {
     if (n < 1 || n > total) return;
-    location.href = `${n}.html`;
+    animateSlideTransition(`${n}.html`);
+  }
+
+  function animateSlideTransition(targetUrl) {
+    const container = document.querySelector('.slide-container');
+    if (container) {
+      // Add slide-out class to trigger animation
+      container.classList.add('slide-out');
+      
+      // Navigate after animation completes
+      setTimeout(() => {
+        location.href = targetUrl;
+      }, TRANSITION_DURATION);
+    } else {
+      // Fallback if no container found
+      location.href = targetUrl;
+    }
   }
 
   function updateFullscreenIcon(isFullscreen) {
@@ -25,15 +42,25 @@
   const nav = document.createElement("div");
   nav.className = "slide-nav";
 
+  const prevSlide = current > 1 ? current - 1 : 1;
   const prev = document.createElement("a");
   prev.className = "slide-nav__button";
-  prev.href = current > 1 ? `${current - 1}.html` : `1.html`;
+  prev.href = `${prevSlide}.html`;
   prev.textContent = "← Prev";
+  prev.addEventListener('click', (e) => {
+    e.preventDefault();
+    goToSlide(prevSlide);
+  });
 
+  const nextSlide = current < total ? current + 1 : total;
   const next = document.createElement("a");
   next.className = "slide-nav__button";
-  next.href = current < total ? `${current + 1}.html` : `${total}.html`;
+  next.href = `${nextSlide}.html`;
   next.textContent = "Next →";
+  next.addEventListener('click', (e) => {
+    e.preventDefault();
+    goToSlide(nextSlide);
+  });
 
   const home = document.createElement("a");
   home.className = "slide-nav__button";
