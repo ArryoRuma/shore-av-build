@@ -21,10 +21,10 @@
         <div class="w-full h-16 flex items-center justify-between px-12 border-b border-gray-100 bg-white">
             <div class="flex items-center gap-3">
                 <i class="fas fa-church text-secondary text-xl"></i>
-                <span class="font-heading font-semibold text-gray-500 uppercase tracking-widest text-sm">Shore Christian
+                <span class="font-heading font-semibold text-gray-500 uppercase tracking-widest text-sm config-company-name">Shore Christian
                     Church</span>
             </div>
-            <span class="text-gray-400 text-sm">AV System Design Proposal</span>
+            <span class="text-gray-400 text-sm config-proposal-title">AV System Design Proposal</span>
         </div>
         <!-- Main Content Area -->
         <div class="flex-1 flex px-16 py-10 bg-gray-50 items-center justify-center">
@@ -122,7 +122,7 @@
         </div>
         <!-- Bottom Footer -->
         <div class="w-full py-4 px-12 flex justify-between items-center bg-white border-t border-gray-200">
-            <p class="text-xs text-gray-400">Shore Christian Church - Sanctuary AV Design</p>
+            <p class="text-xs text-gray-400 config-footer-text">Shore Christian Church - Sanctuary AV Design</p>
             <div class="flex gap-2">
                 <div class="w-2 h-2 rounded-full bg-gray-300"></div>
                 <div class="w-2 h-2 rounded-full bg-gray-300"></div>
@@ -138,7 +138,20 @@
             </div>
         </div>
     </div>
+    <script src="../js/config.js"></script>
     <script src="../js/nav.js"></script>
+    <script>
+        // Populate config values
+        if (window.SITE_CONFIG) {
+            const companyNameEl = document.querySelector('.config-company-name');
+            const proposalTitleEl = document.querySelector('.config-proposal-title');
+            const footerTextEl = document.querySelector('.config-footer-text');
+            
+            if (companyNameEl) companyNameEl.textContent = window.SITE_CONFIG.company.name;
+            if (proposalTitleEl) proposalTitleEl.textContent = window.SITE_CONFIG.proposal.title;
+            if (footerTextEl) footerTextEl.textContent = `${window.SITE_CONFIG.company.name} - ${window.SITE_CONFIG.company.sector}`;
+        }
+    </script>
 </body>
 
 </html>
