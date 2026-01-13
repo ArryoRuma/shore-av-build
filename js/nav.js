@@ -10,6 +10,31 @@
     location.href = `${n}.html`;
   }
 
+  // Create navigation elements first
+  const nav = document.createElement("div");
+  nav.style.position = "fixed";
+  nav.style.bottom = "16px";
+  nav.style.left = "16px";
+  nav.style.display = "flex";
+  nav.style.gap = "8px";
+  nav.style.zIndex = "9999";
+
+  const prev = document.createElement("a");
+  prev.href = current > 1 ? `${current - 1}.html` : `1.html`;
+  prev.textContent = "← Prev";
+
+  const next = document.createElement("a");
+  next.href = current < total ? `${current + 1}.html` : `${total}.html`;
+  next.textContent = "Next →";
+
+  const home = document.createElement("a");
+  home.href = "../index.html";
+  home.textContent = "Index";
+
+  const fullscreenBtn = document.createElement("button");
+  fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+  fullscreenBtn.title = "Enter Fullscreen (F)";
+
   // Fullscreen functionality
   let isFullscreen = false;
 
@@ -48,6 +73,11 @@
     }
   }
 
+  fullscreenBtn.onclick = (e) => {
+    e.preventDefault();
+    toggleFullscreen();
+  };
+
   // Listen for fullscreen changes (e.g., ESC key)
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
@@ -62,6 +92,12 @@
     }
   });
 
+  document.addEventListener('msfullscreenchange', () => {
+    if (!document.msFullscreenElement) {
+      exitFullscreenMode();
+    }
+  });
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" || e.key === "PageDown") go(current + 1);
     if (e.key === "ArrowLeft" || e.key === "PageUp") go(current - 1);
@@ -72,34 +108,6 @@
       toggleFullscreen();
     }
   });
-
-  const nav = document.createElement("div");
-  nav.style.position = "fixed";
-  nav.style.bottom = "16px";
-  nav.style.left = "16px";
-  nav.style.display = "flex";
-  nav.style.gap = "8px";
-  nav.style.zIndex = "9999";
-
-  const prev = document.createElement("a");
-  prev.href = current > 1 ? `${current - 1}.html` : `1.html`;
-  prev.textContent = "← Prev";
-
-  const next = document.createElement("a");
-  next.href = current < total ? `${current + 1}.html` : `${total}.html`;
-  next.textContent = "Next →";
-
-  const home = document.createElement("a");
-  home.href = "../index.html";
-  home.textContent = "Index";
-
-  const fullscreenBtn = document.createElement("button");
-  fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-  fullscreenBtn.title = "Enter Fullscreen (F)";
-  fullscreenBtn.onclick = (e) => {
-    e.preventDefault();
-    toggleFullscreen();
-  };
 
   [prev, home, next, fullscreenBtn].forEach((a) => {
     a.style.padding = "10px 12px";
