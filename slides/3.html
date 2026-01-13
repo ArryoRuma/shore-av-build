@@ -12,6 +12,9 @@
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
+    <!-- Template System -->
+    <script src="../js/config.js"></script>
+    <script src="../js/template-renderer.js"></script>
 </head>
 
 <body>
@@ -30,105 +33,21 @@
         <div class="flex-1 flex flex-col px-16 py-10 bg-gray-50 relative">
             <!-- Slide Title -->
             <div class="mb-8 border-b border-gray-200 pb-4">
-                <h1 class="font-heading text-4xl font-bold text-gray-800">
+                <h1 class="font-heading text-4xl font-bold text-gray-800" data-template="slide-title">
                     Project <span class="text-primary">Understanding</span>
                 </h1>
-                <p class="text-gray-500 mt-2 text-lg">Current state assessment and strategic objectives for the
+                <p class="text-gray-500 mt-2 text-lg" data-template="slide-subtitle">Current state assessment and strategic objectives for the
                     sanctuary.</p>
             </div>
             <!-- Content Grid -->
             <div class="flex-1 grid grid-cols-12 gap-8">
                 <!-- Left Column: Context & Strategy (4 cols) -->
-                <div class="col-span-4 flex flex-col gap-6">
-                    <!-- Current State Box -->
-                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-gray-400">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
-                                <i class="fas fa-search-location"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-gray-700 text-lg">Current Context</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            The sanctuary currently operates with minimal infrastructure. The new design must bridge the
-                            gap to professional standards while respecting existing constraints.
-                        </p>
-                    </div>
-                    <!-- Strategy Box -->
-                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-primary flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary">
-                                <i class="fas fa-drafting-compass"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-gray-800 text-lg">Design-First Strategy</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            Our intent is to minimize risk and reduce ambiguity before installation begins.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-secondary mt-1"></i>
-                                <p class="text-gray-600 text-sm">Inform precise equipment selection</p>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-secondary mt-1"></i>
-                                <p class="text-gray-600 text-sm">Establish accurate budget estimates</p>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-secondary mt-1"></i>
-                                <p class="text-gray-600 text-sm">Create clear installation roadmap</p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-span-4 flex flex-col gap-6" data-template="left-column">
+                    <!-- Content will be dynamically generated -->
                 </div>
                 <!-- Right Column: Functional Priorities (8 cols) -->
-                <div class="col-span-8 grid grid-rows-3 gap-4">
-                    <!-- Priority 1: Audio -->
-                    <div class="bg-white p-6 rounded-lg card-shadow border-left-accent flex items-center gap-6">
-                        <div
-                            class="w-16 h-16 rounded-xl bg-indigo-50 flex-shrink-0 flex items-center justify-center text-indigo-600 text-2xl">
-                            <i class="fas fa-microphone-lines"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-heading font-bold text-gray-800 text-xl mb-1">Audio Performance</h3>
-                            <p class="text-gray-600">
-                                Prioritizing <span class="font-semibold text-primary">clear speech
-                                    intelligibility</span> for spoken word and <span
-                                    class="font-semibold text-primary">reliable music reinforcement</span> for the
-                                worship band.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Priority 2: Modern Capabilities -->
-                    <div class="bg-white p-6 rounded-lg card-shadow border-left-accent flex items-center gap-6">
-                        <div
-                            class="w-16 h-16 rounded-xl bg-teal-50 flex-shrink-0 flex items-center justify-center text-teal-600 text-2xl">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-heading font-bold text-gray-800 text-xl mb-1">Contemporary Worship</h3>
-                            <p class="text-gray-600">
-                                Enabling future-ready audiovisual capabilities including <span
-                                    class="font-semibold text-primary">projection/IMAG</span> and seamless <span
-                                    class="font-semibold text-primary">livestream readiness</span>.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Priority 3: Usability -->
-                    <div class="bg-white p-6 rounded-lg card-shadow border-left-accent flex items-center gap-6">
-                        <div
-                            class="w-16 h-16 rounded-xl bg-orange-50 flex-shrink-0 flex items-center justify-center text-orange-500 text-2xl">
-                            <i class="fas fa-users-gear"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-heading font-bold text-gray-800 text-xl mb-1">Operational Simplicity</h3>
-                            <p class="text-gray-600">
-                                Systems designed for <span class="font-semibold text-primary">volunteer staff</span>,
-                                balancing professional features with accessible control logic and workflows.
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-span-8 grid grid-rows-3 gap-4" data-template="right-column">
+                    <!-- Content will be dynamically generated -->
                 </div>
             </div>
         </div>
@@ -150,7 +69,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/config.js"></script>
     <script src="../js/nav.js"></script>
     <script>
         // Populate config values
@@ -162,6 +80,11 @@
             if (companyNameEl) companyNameEl.textContent = window.SITE_CONFIG.company.name;
             if (proposalTitleEl) proposalTitleEl.textContent = window.SITE_CONFIG.proposal.title;
             if (footerTextEl) footerTextEl.textContent = `${window.SITE_CONFIG.company.name} - ${window.SITE_CONFIG.company.sector}`;
+        }
+
+        // Render template content
+        if (window.TemplateRenderer) {
+            window.TemplateRenderer.renderTemplate('slide3');
         }
     </script>
 </body>

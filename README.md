@@ -21,15 +21,31 @@ shore-av-build/
 ├── slides/             # Individual presentation slides (1-11)
 │   ├── 1.html         # Cover slide
 │   ├── 2.html         # Welcome & Introduction
+│   ├── 3.html         # Project Understanding (template-driven) ✨
 │   ├── ...            # Additional slides
 │   └── 11.html        # Next Steps & Contact
 ├── css/
 │   └── style.css      # Centralized theme tokens and styles
 ├── js/
-│   ├── config.js      # Configuration for contact/company info
+│   ├── config.js      # Configuration & slide content data
+│   ├── template-renderer.js  # Template rendering system ✨
 │   └── nav.js         # Navigation functionality
-└── assets/            # Directory for future assets (images, etc.)
+├── assets/            # Directory for future assets (images, etc.)
+├── TEMPLATE_SYSTEM.md # Template system documentation ✨
+└── README.md          # This file
 ```
+
+## ✨ Template System (New!)
+
+Slide 3 now uses a **component-style template system** that allows you to update slide content by editing `config.js` instead of HTML. This makes it easy to create new proposals without touching any HTML files.
+
+**Key Features:**
+- 📝 All content in `config.js` - no HTML editing needed
+- 🧩 Reusable components (info boxes, priority cards)
+- 🔄 Dynamic rendering at page load
+- 🚀 No build step required
+
+**See [TEMPLATE_SYSTEM.md](./TEMPLATE_SYSTEM.md) for complete documentation.**
 
 ## ⚙️ Configuration
 
