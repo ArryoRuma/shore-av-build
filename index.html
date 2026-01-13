@@ -10,28 +10,155 @@
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body>
-<div class="index-container">
-  <h1 class="index-title">Shore Christian Church AV Proposal</h1>
-  <p class="index-paragraph">Use the links below to navigate the proposal slides.</p>
-
-  <p class="index-paragraph">
-    <a href="./slides/1.html" class="index-start-link">Start → Slide 1</a>
-  </p>
-
-  <ol class="index-list">
-    <li><a href="./slides/1.html">Slide 1</a></li>
-    <li><a href="./slides/2.html">Slide 2</a></li>
-    <li><a href="./slides/3.html">Slide 3</a></li>
-    <li><a href="./slides/4.html">Slide 4</a></li>
-    <li><a href="./slides/5.html">Slide 5</a></li>
-    <li><a href="./slides/6.html">Slide 6</a></li>
-    <li><a href="./slides/7.html">Slide 7</a></li>
-    <li><a href="./slides/8.html">Slide 8</a></li>
-    <li><a href="./slides/9.html">Slide 9</a></li>
-    <li><a href="./slides/10.html">Slide 10</a></li>
-    <li><a href="./slides/11.html">Slide 11</a></li>
-  </ol>
-</div>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <div class="min-h-screen flex flex-col">
+        <!-- Decorative Top Bar -->
+        <div class="w-full h-3 bg-primary"></div>
+        <div class="w-full h-2 bg-secondary" style="width: 40%;"></div>
+        
+        <!-- Main Hero Content -->
+        <div class="flex-1 flex flex-col justify-center items-center px-8 py-16 text-center">
+            <!-- Church Icon -->
+            <div class="mb-8 p-8 rounded-full bg-blue-50 shadow-lg">
+                <i class="fas fa-church text-6xl text-primary"></i>
+            </div>
+            
+            <!-- Main Title -->
+            <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-gray-800 mb-4">
+                Shore Christian Church
+            </h1>
+            <p class="font-heading text-3xl text-secondary mb-2">
+                AV System Design Proposal
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-24 h-1 bg-secondary my-6"></div>
+            
+            <!-- Subtitle -->
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl">
+                Navigate through our comprehensive sanctuary AV system design proposal
+            </p>
+            
+            <!-- CTA Button -->
+            <a href="./slides/1.html" class="cta-button">
+                <i class="fas fa-play-circle mr-2"></i>
+                Start Presentation
+            </a>
+        </div>
+        
+        <!-- Slide Grid Section -->
+        <div class="bg-white py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="font-heading text-3xl font-bold text-gray-800 mb-4 text-center">
+                    Jump to Any Slide
+                </h2>
+                <p class="text-center text-gray-600 mb-10">
+                    Select any slide below to navigate directly to that section
+                </p>
+                
+                <!-- Slide Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+                    <a href="./slides/1.html" class="slide-card">
+                        <div class="slide-number">01</div>
+                        <div class="slide-title">Cover</div>
+                    </a>
+                    <a href="./slides/2.html" class="slide-card">
+                        <div class="slide-number">02</div>
+                        <div class="slide-title">Welcome</div>
+                    </a>
+                    <a href="./slides/3.html" class="slide-card">
+                        <div class="slide-number">03</div>
+                        <div class="slide-title">Project Understanding</div>
+                    </a>
+                    <a href="./slides/4.html" class="slide-card">
+                        <div class="slide-number">04</div>
+                        <div class="slide-title">Design Principles</div>
+                    </a>
+                    <a href="./slides/5.html" class="slide-card">
+                        <div class="slide-number">05</div>
+                        <div class="slide-title">Scope (Part 1)</div>
+                    </a>
+                    <a href="./slides/6.html" class="slide-card">
+                        <div class="slide-number">06</div>
+                        <div class="slide-title">Scope (Part 2)</div>
+                    </a>
+                    <a href="./slides/7.html" class="slide-card">
+                        <div class="slide-number">07</div>
+                        <div class="slide-title">Deliverables</div>
+                    </a>
+                    <a href="./slides/8.html" class="slide-card">
+                        <div class="slide-number">08</div>
+                        <div class="slide-title">Timeline</div>
+                    </a>
+                    <a href="./slides/9.html" class="slide-card">
+                        <div class="slide-number">09</div>
+                        <div class="slide-title">Investment</div>
+                    </a>
+                    <a href="./slides/10.html" class="slide-card">
+                        <div class="slide-number">10</div>
+                        <div class="slide-title">Why Choose Us</div>
+                    </a>
+                    <a href="./slides/11.html" class="slide-card">
+                        <div class="slide-number">11</div>
+                        <div class="slide-title">Next Steps</div>
+                    </a>
+                </div>
+                
+                <!-- Navigation Instructions -->
+                <div class="bg-blue-50 rounded-lg p-8 border-l-4 border-primary">
+                    <h3 class="font-heading text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-keyboard text-primary mr-3"></i>
+                        Keyboard Navigation
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        <div class="flex items-center">
+                            <kbd class="kbd">←</kbd>
+                            <kbd class="kbd">→</kbd>
+                            <span class="ml-3">Navigate between slides</span>
+                        </div>
+                        <div class="flex items-center">
+                            <kbd class="kbd">Home</kbd>
+                            <kbd class="kbd">End</kbd>
+                            <span class="ml-3">Jump to first/last slide</span>
+                        </div>
+                        <div class="flex items-center">
+                            <kbd class="kbd">PageUp</kbd>
+                            <kbd class="kbd">PageDown</kbd>
+                            <span class="ml-3">Previous/next slide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-gray-800 text-white py-6 px-8">
+            <div class="max-w-6xl mx-auto text-center text-sm">
+                <p class="mb-2">Shore Christian Church - Sanctuary AV System Design Proposal</p>
+                <p class="text-gray-400">
+                    <span class="config-date">January 2026</span> | 
+                    Prepared by <span class="config-prepared-by">Your Name / Company</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/config.js"></script>
+    <script>
+        // Populate config values
+        if (window.SITE_CONFIG) {
+            const dateEls = document.querySelectorAll('.config-date');
+            const preparedByEls = document.querySelectorAll('.config-prepared-by');
+            
+            dateEls.forEach(el => {
+                if (el) el.textContent = window.SITE_CONFIG.proposal.date;
+            });
+            
+            preparedByEls.forEach(el => {
+                if (el) el.textContent = window.SITE_CONFIG.contact.preparedBy;
+            });
+        }
+    </script>
 </body>
 </html>
