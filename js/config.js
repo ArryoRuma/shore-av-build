@@ -8,10 +8,10 @@ const CONFIG = {
     sector: "Building AV System Design (Design-Only)"
   },
   contact: {
-    preparedBy: "Your Name / Company",
-    email: "contact@example.com",
-    phone: "(555) 123-4567",
-    website: "www.example.com"
+    preparedBy: "Larryon Truman / TruMedia Creative",
+    email: "lar@trumediacreative.com",
+    phone: "(903) 635-0855",
+    website: "www.trumediacreative.com"
   },
   proposal: {
     date: "January 2026",
