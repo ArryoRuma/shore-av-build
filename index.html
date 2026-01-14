@@ -113,7 +113,20 @@
             });
             
             preparedByEls.forEach(el => {
-                if (el) el.textContent = window.SITE_CONFIG.contact.preparedBy;
+                if (el) {
+                    if (window.SITE_CONFIG.contact.preparedByUrl) {
+                        const link = document.createElement('a');
+                        link.href = window.SITE_CONFIG.contact.preparedByUrl;
+                        link.textContent = window.SITE_CONFIG.contact.preparedBy;
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        link.className = 'text-primary hover:underline';
+                        el.textContent = '';
+                        el.appendChild(link);
+                    } else {
+                        el.textContent = window.SITE_CONFIG.contact.preparedBy;
+                    }
+                }
             });
         }
         
