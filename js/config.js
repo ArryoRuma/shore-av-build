@@ -5,7 +5,7 @@ const CONFIG = {
   company: {
     name: "Shore Christian Church",
     tagline: "AV System Design Proposal",
-    sector: "Sanctuary AV System Design (Design-Only)"
+    sector: "Building AV System Design (Design-Only)"
   },
   contact: {
     preparedBy: "Your Name / Company",
