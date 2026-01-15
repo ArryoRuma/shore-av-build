@@ -195,7 +195,20 @@
             const phoneEl = document.querySelector('.config-phone');
             const websiteEl = document.querySelector('.config-website');
             
-            if (preparedByEl) preparedByEl.textContent = window.SITE_CONFIG.contact.preparedBy;
+            if (preparedByEl) {
+                if (window.SITE_CONFIG.contact.preparedByUrl) {
+                    const link = document.createElement('a');
+                    link.href = window.SITE_CONFIG.contact.preparedByUrl;
+                    link.textContent = window.SITE_CONFIG.contact.preparedBy;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.className = 'text-primary hover:underline';
+                    preparedByEl.textContent = '';
+                    preparedByEl.appendChild(link);
+                } else {
+                    preparedByEl.textContent = window.SITE_CONFIG.contact.preparedBy;
+                }
+            }
             if (emailEl) emailEl.textContent = window.SITE_CONFIG.contact.email;
             if (phoneEl) phoneEl.textContent = window.SITE_CONFIG.contact.phone;
             if (websiteEl) websiteEl.textContent = window.SITE_CONFIG.contact.website;

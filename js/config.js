@@ -8,7 +8,8 @@ const CONFIG = {
     sector: "Building AV System Design (Design-Only)"
   },
   contact: {
-    preparedBy: "Larryon Truman / TruMedia Creative",
+    preparedBy: "TruMedia Creative",
+    preparedByUrl: "https://www.trumediacreative.com",
     email: "lar@trumediacreative.com",
     phone: "(903) 635-0855",
     website: "www.trumediacreative.com"
